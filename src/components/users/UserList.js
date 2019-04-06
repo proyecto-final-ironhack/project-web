@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { usersService } from '../../services';
+import { usersService } from '../../services/';
 import UserItem from './UserItem';
 
 class UserList extends Component {
