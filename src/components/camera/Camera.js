@@ -16,7 +16,6 @@ class Camera extends Component{
     capture = () => {
         let imageB64 = this.webcam.getScreenshot();
         imageB64 = imageB64.split(',')[1];
-        console.log(imageB64);
         cameraService.images(imageB64)
             .then(
                 (description) => console.log(description),
