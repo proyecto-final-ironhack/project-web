@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import NavBar from '../misc/NavBar';
-import axios from 'axios';
 import { cameraService }  from '../../services/';
+import NavBar from '../misc/NavBar';
 import Webcam from 'react-webcam';
 
-
-
-class Camera extends Component{
+class FindObject extends Component{
     
-    state = { selectedFile: null,
-        message: ''
+    
+    state = {
+        message: '',
+        objectToFind: 'Ceiling',
+        clicked: false
     }
 
 
@@ -25,34 +25,14 @@ class Camera extends Component{
         cameraService.images(imageB64)
             .then(
                 (res) => this.setState({
-                    message: res.description
+                    message: res.description,
+                    clicked: true
                 }),
                 (error) => console.error(error),
-              
+                
             );
-
-
     };
-    
 
-
-
-
-    fileChangedHandler = event => {
-      this.setState({ selectedFile: event.target.files[0] })
-    }
-
-
-    uploadHandler = () => {
-        const formData = new FormData()
-        formData.append(
-          'myFile',
-          this.state.selectedFile,
-          this.state.selectedFile.name
-        )
-        axios.post('http://localhost:3001/images', formData)
-       
-    }
 
     
     render(){
@@ -62,12 +42,12 @@ class Camera extends Component{
             height: 720,
             facingMode: "user" // para la camara trasera poner aqui { exact: "environment" }
         };
-    
+        
         return(
             <div>
-            <NavBar />
+                <NavBar />
             <div id="container">
-                
+
                 <Webcam
                 audio={false}
                 height={250}
@@ -77,17 +57,21 @@ class Camera extends Component{
                 videoConstraints={videoConstraints}
                 />
 
-                <button onClick={this.capture} className = "btn btn-primary btn-lg btn-block">Make your photo!</button>
+                <button onClick={this.capture} className = "btn btn-primary btn-lg btn-block">Take a photo!</button>
 
                 <div className= "display-message">
-                    <p>{this.state.message}</p>
+                    <p>Find this:</p>
+                    <p>{this.state.objectToFind}</p>
                 </div>
 
-                <input type="file" onChange={this.fileChangedHandler}/>
-                <button onClick={this.uploadHandler}>Upload!</button>
-                
-        
+                <div>
+                    <p>{this.state.message}</p>
+                </div>     
 
+                <div>
+                    { this.state.message === this.state.objectToFind && <p>It' a match!</p>}
+                    { this.state.message !== this.state.objectToFind && this.state.clicked && <p>Try again!</p>}
+                </div>
             </div>
             </div>
         )
@@ -95,4 +79,4 @@ class Camera extends Component{
 
 }
 
-export default Camera;
+export default FindObject;
