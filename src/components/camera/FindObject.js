@@ -29,21 +29,16 @@ class FindObject extends Component{
                     message: res.description,
                     clicked: true
                 }),
-                console.log(res.description),
-                this.checkMatch()),
+                console.log(res.description)),
+ 
                 (error) => console.error(error)
                 
             );
     };
 
-    checkMatch = () => {
-        if (this.state.message === this.state.objectToFind) {
-            this.randomObject();
-        }
-    }
 
     randomObject = () => {
-        const arrayNames = ['Dog', 'Glasses', 'Bottle']
+        const arrayNames = ['Dog', 'Glasses', 'Bottle', 'Ball', 'Gadget', 'Face']
         const findRandom = arrayNames[Math.floor(Math.random() * arrayNames.length)];
 
         this.setState({
@@ -78,7 +73,7 @@ class FindObject extends Component{
                 />
 
                 <button onClick={this.capture} className = "btn btn-primary btn-lg btn-block">Take a photo!</button>
-                <button onClick={this.randomObject}className="btn btn-secondary btn-lg btn-block">Skip</button>
+                <button onClick={this.randomObject}className="btn btn-secondary btn-lg btn-block">Next</button>
                 <div className= "display-message">
                     <p>Find this:</p>
                     <p>{this.state.objectToFind}</p>

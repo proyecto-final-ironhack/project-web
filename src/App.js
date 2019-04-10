@@ -6,6 +6,7 @@ import UserList from './components/users/UserList';
 import Camera from './components/camera/Camera';
 import Menu from './components/misc/MainMenu';
 import FindObject from './components/camera/FindObject';
+import Home from './components/misc/Home'
 
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
               <Route exact path="/images" component={Camera} />
               <Route exact path="/object" component={FindObject} />
               <Route exact path="/menu" component={Menu} />
+              <Route exact path="/" component={Home} />
               <Redirect to="/menu"/>
             </Switch>
           </div>
