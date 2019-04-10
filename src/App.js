@@ -23,7 +23,7 @@ class App extends Component {
               <Route exact path="/object" component={FindObject} />
               <Route exact path="/menu" component={Menu} />
               <Route exact path="/" component={Home} />
-              <Redirect to="/menu"/>
+              <Redirect to="/"/>
             </Switch>
           </div>
         </div>
