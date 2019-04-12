@@ -1,16 +1,19 @@
 {
-  "main.css": "https://proyecto-final-ironhack.github.io/project-web/static/css/main.6c59fc78.chunk.css",
-  "main.js": "https://proyecto-final-ironhack.github.io/project-web/static/js/main.74a6215b.chunk.js",
-  "main.js.map": "https://proyecto-final-ironhack.github.io/project-web/static/js/main.74a6215b.chunk.js.map",
+  "main.css": "https://proyecto-final-ironhack.github.io/project-web/static/css/main.b02fe97a.chunk.css",
+  "main.js": "https://proyecto-final-ironhack.github.io/project-web/static/js/main.454f8d0d.chunk.js",
+  "main.js.map": "https://proyecto-final-ironhack.github.io/project-web/static/js/main.454f8d0d.chunk.js.map",
   "runtime~main.js": "https://proyecto-final-ironhack.github.io/project-web/static/js/runtime~main.d8c809d4.js",
   "runtime~main.js.map": "https://proyecto-final-ironhack.github.io/project-web/static/js/runtime~main.d8c809d4.js.map",
   "static/css/2.24982c8a.chunk.css": "https://proyecto-final-ironhack.github.io/project-web/static/css/2.24982c8a.chunk.css",
-  "static/js/2.3066c078.chunk.js": "https://proyecto-final-ironhack.github.io/project-web/static/js/2.3066c078.chunk.js",
-  "static/js/2.3066c078.chunk.js.map": "https://proyecto-final-ironhack.github.io/project-web/static/js/2.3066c078.chunk.js.map",
+  "static/js/2.7822fca4.chunk.js": "https://proyecto-final-ironhack.github.io/project-web/static/js/2.7822fca4.chunk.js",
+  "static/js/2.7822fca4.chunk.js.map": "https://proyecto-final-ironhack.github.io/project-web/static/js/2.7822fca4.chunk.js.map",
   "index.html": "https://proyecto-final-ironhack.github.io/project-web/index.html",
-  "precache-manifest.b4245038154085ff0bdf83d780de7cea.js": "https://proyecto-final-ironhack.github.io/project-web/precache-manifest.b4245038154085ff0bdf83d780de7cea.js",
+  "precache-manifest.0caa4e9deef0a449727a826ce727edaa.js": "https://proyecto-final-ironhack.github.io/project-web/precache-manifest.0caa4e9deef0a449727a826ce727edaa.js",
   "service-worker.js": "https://proyecto-final-ironhack.github.io/project-web/service-worker.js",
   "static/css/2.24982c8a.chunk.css.map": "https://proyecto-final-ironhack.github.io/project-web/static/css/2.24982c8a.chunk.css.map",
-  "static/css/main.6c59fc78.chunk.css.map": "https://proyecto-final-ironhack.github.io/project-web/static/css/main.6c59fc78.chunk.css.map",
-  "static/media/font-awesome.min.css": "https://proyecto-final-ironhack.github.io/project-web/static/media/fontawesome-webfont.fee66e71.woff"
+  "static/css/main.b02fe97a.chunk.css.map": "https://proyecto-final-ironhack.github.io/project-web/static/css/main.b02fe97a.chunk.css.map",
+  "static/media/JerryCamera.jpg": "https://proyecto-final-ironhack.github.io/project-web/static/media/JerryCamera.440e98b2.jpg",
+  "static/media/index.css": "https://proyecto-final-ironhack.github.io/project-web/static/media/Kids Zone.9579c36e.otf",
+  "static/media/font-awesome.min.css": "https://proyecto-final-ironhack.github.io/project-web/static/media/fontawesome-webfont.fee66e71.woff",
+  "static/media/jerry.jpg": "https://proyecto-final-ironhack.github.io/project-web/static/media/jerry.a4fa1b2d.jpg"
 }

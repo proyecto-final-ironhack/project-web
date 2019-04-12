@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "https://proyecto-final-ironhack.github.io/project-web/precache-manifest.b4245038154085ff0bdf83d780de7cea.js"
+  "https://proyecto-final-ironhack.github.io/project-web/precache-manifest.0caa4e9deef0a449727a826ce727edaa.js"
 );
 
 workbox.clientsClaim();
