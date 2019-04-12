@@ -7,6 +7,168 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  background-color: #E1E1E1;
+  background-color: white;
 }
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@font-face {
+    font-family: 'Kids';
+    src: url('./fonts/Kids\ Zone.otf');
+}
+
+@font-face {
+  font-family: 'Kids inner';
+  src: url('./fonts/Kids\ Zone\ Inner.otf');
+}
+
+@font-face {
+  font-family: 'Kids shadow';
+  src: url('./fonts/Kids\ Zone\ Shadow.otf');
+}
+
+.navBar{
+  margin-top: 5px;
+  margin-left: 38px;
+}
+
+.camera{
+  border: 4px;
+  overflow: hidden;
+  border-style: solid;
+  border-color: black;
+}
+
+.init-camera{
+  margin: 10px;
+}
+
+.kids-font{
+  font-family: 'Kids';
+}
+
+.box {
+  width: 300px;
+  margin: 20px auto;
+  background: #13e941;
+  padding: 10px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 25px;
+  font-family: 'Kids';
+  color: rgb(209, 38, 201);
+  position: relative;
+  border-radius: 25px;
+}
+
+.box-jerry-match {
+  width: 300px;
+  margin: 10px auto;
+  background: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 25px;
+  font-family: 'Kids';
+  color: #13e941;
+  position: relative;
+  border-radius: 25px;
+}
+
+.box-jerry-incorrect {
+  width: 300px;
+  margin: 10px auto;
+  background: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 25px;
+  font-family: 'Kids';
+  color: red;
+  position: relative;
+  border-radius: 25px;
+}
+
+.bubble:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #13e941;;
+  border-right: 10px solid 
+  
+  transparent;
+  border-top: 10px solid #13e941;;
+  border-bottom: 10px solid transparent;
+  left: 69px;
+  bottom: -19px;
+}
+
+.jerry:before{
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #13e941;;
+  border-right: 10px solid 
+}
+
+.container-home {
+  display: flex;
+  justify-content: center;
+}
+ 
+.container-find-object {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Jerry-veredict{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+.next{
+  margin-left: 40px;
+}
+  
+  
+.container-menu {
+  margin-top: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.button{
+  display:inline-block;
+  padding:0.7em 1.4em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.15em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Kids',sans-serif;
+  text-transform:uppercase;
+  font-weight:400;
+  color:#FFFFFF;
+  background-color:#3369ff;
+  box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+  text-align:center;
+  position:relative;
+  }
+  .button:active{
+  top:0.1em;
+  }
+
+
+
+
+
 

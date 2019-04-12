@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { faceService }  from '../../services/';
+import CameraIcon from '../../images/camera.png'
 import Webcam from 'react-webcam';
 
 class Home extends Component{
@@ -49,21 +50,31 @@ class Home extends Component{
 
         return(
             <div>
-            <p>Give me a smile if you want to play!</p>
-              <Webcam
-                audio={false}
-                height={250}
-                ref={this.setRef}
-                screenshotFormat="image/jpeg"
-                width={290}
-                videoConstraints={videoConstraints}
-                />
-
-            <button onClick={this.captureFace} className = "btn btn-primary btn-lg btn-block">Give it a try!</button>
+              
+                <div className="camera init-camera"> 
+                    <Webcam
+                            audio={false}
+                            height={250}
+                            ref={this.setRef}
+                            screenshotFormat="image/jpeg"
+                            width={290}
+                            videoConstraints={videoConstraints}
+                            />
+                   </div> 
+              
+                    <div className="container-home">
+                           <button onClick={this.captureFace}> <img src={CameraIcon} /> </button>
+                    </div>  
+            
+            <div className="box bubble">
+                Give me a smile to play!
+            </div>
+            
             <div>
             { this.state.expression === "VERY_LIKELY" && <Redirect to="/menu"  /> }
-            { this.state.expression !== "VERY_LIKELY" && this.state.clicked && <p>Come on! I want to see your smile!</p>}
+            { this.state.expression !== "VERY_LIKELY" && this.state.clicked && <div className="box bubble">Come on! I want to see your smile!</div>}
             </div>
+               
             </div>
         )
     }

@@ -3,6 +3,8 @@ import NavBar from '../misc/NavBar';
 import axios from 'axios';
 import { cameraService }  from '../../services/';
 import Webcam from 'react-webcam';
+import CameraIcon from '../../images/camera.png'
+import JerryCamera from '../../images/JerryCamera.jpg'
 
 
 
@@ -54,7 +56,8 @@ class Camera extends Component{
        
     }
 
-    
+
+
     render(){
 
         const videoConstraints = {
@@ -67,7 +70,7 @@ class Camera extends Component{
             <div>
             <NavBar />
             <div id="container">
-                
+                <div className="camera">
                 <Webcam
                 audio={false}
                 height={250}
@@ -76,17 +79,20 @@ class Camera extends Component{
                 width={290}
                 videoConstraints={videoConstraints}
                 />
-
-                <button onClick={this.capture} className = "btn btn-primary btn-lg btn-block">Make your photo!</button>
-
+                </div>
+                
+                    <div className="container-home">
+                           <button onClick={this.capture}> <img src={CameraIcon} /> </button>
+                    </div>  
                 <div className= "display-message">
-                    <p>{this.state.message}</p>
+                    {this.state.message !== '' && <div><div className="box bubble">{this.state.message}!</div>
+                     <img src={JerryCamera} width="20%"></img></div>}
                 </div>
 
-                <input type="file" onChange={this.fileChangedHandler}/>
+                {/* <input type="file" onChange={this.fileChangedHandler}/>
                 <button onClick={this.uploadHandler}>Upload!</button>
                 
-        
+         */}
 
             </div>
             </div>

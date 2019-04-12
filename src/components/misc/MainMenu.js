@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-import { Link, NavLink } from 'react-router-dom'
-
+import { Link } from 'react-router-dom'
+import JerryMenu from '../../images/jerry.jpg'
 class Menu extends Component {
 
 
     render() {
         return(
-            
-            <div>
-                <p>Let´s learn some english having fun!</p>
-                 <Link className="btn btn-primary btn-lg btn-block" to="/images">Tell me what's this!</Link>
-                 <Link className="btn btn-primary btn-lg btn-block" to="/object">Find this object!</Link>
+            <div className="MainDiv">
+                <div className="box bubble">Let's learn some english having fun!</div>
+                <img src={JerryMenu} width="35%"></img>
+                <div className="container-menu">                  
+                        <Link className="button" to="/images">Tell me what's this!</Link>
+                        <Link className="button" to="/object">Find this object!</Link>
+                 </div>
             </div>
+            
         )
     }
 }

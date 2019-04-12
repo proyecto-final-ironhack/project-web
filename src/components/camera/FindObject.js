@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { cameraService }  from '../../services/';
 import NavBar from '../misc/NavBar';
 import Webcam from 'react-webcam';
+import CameraIcon from '../../images/camera.png'
+import RightArrow from '../../images/right-chevron.png'
+import JerryCamera from '../../images/JerryCamera.jpg'
 
 class FindObject extends Component{
     
@@ -62,7 +65,7 @@ class FindObject extends Component{
             <div>
                 <NavBar />
             <div id="container">
-
+            <div className="camera">
                 <Webcam
                 audio={false}
                 height={250}
@@ -71,18 +74,22 @@ class FindObject extends Component{
                 width={290}
                 videoConstraints={videoConstraints}
                 />
-
-                <button onClick={this.capture} className = "btn btn-primary btn-lg btn-block">Take a photo!</button>
-                <button onClick={this.randomObject}className="btn btn-secondary btn-lg btn-block">Next</button>
-                <div className= "display-message">
-                    <p>Find this:</p>
-                    <p>{this.state.objectToFind}</p>
-                </div>  
-
-                <div>
-                    { this.state.message === this.state.objectToFind && this.state.clicked && <p>It' a match!</p> }
-                    { this.state.message !== this.state.objectToFind && this.state.clicked && <p>Try again!</p>}
-                </div>
+            </div>
+            <div className="container-find-object">
+                           <button onClick={this.capture}> <img src={CameraIcon} /> </button>
+             
+                <button onClick={this.randomObject}className="kids-font next">Next<img src={RightArrow}/></button>
+            </div>    
+                
+                    <div className= "box bubble">
+                        Find this: {this.state.objectToFind}
+                    </div>  
+                    <div className="Jerry-veredict">
+                        <img src={JerryCamera} width="20%"></img>
+                        { this.state.message === this.state.objectToFind && this.state.clicked && <div className="box-jerry-match jerry">It' a match!</div> }
+                        { this.state.message !== this.state.objectToFind && this.state.clicked && <div className="box-jerry-incorrect jerry">Try again!</div>}
+                    </div>
+                
             </div>
             </div>
         )
